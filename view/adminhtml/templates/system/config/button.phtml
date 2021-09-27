@@ -1,0 +1,30 @@
+<script>
+    require([
+        'jquery',
+        'prototype',
+    ], function(jQuery){
+        function function_name() {
+            params = {
+            };
+            jQuery('body').trigger('processStart');
+            new Ajax.Request('<?php /** @var Codilar\CategoryForGTM\Block\System\Config\Button $block */
+                echo $block->getAjaxUrl() ?>', {
+                loaderArea:     false,
+                asynchronous:   true,
+                parameters:     params,
+                onSuccess: function(transport) {
+                    jQuery('body').trigger('processStop');
+                },
+                onError: function(transport) {
+                    jQuery('body').trigger('processStop');
+                }
+            });
+        }
+
+        jQuery('#btnid').click(function () {
+            function_name ();
+        });
+    });
+</script>
+
+<?php echo $block->getButtonHtml() ?>

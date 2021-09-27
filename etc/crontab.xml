@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+*
+*  crontab.xml
+*
+* To define a cron job and schedule
+*
+*/
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="codilar_cronjob">
+        <job name="category_paths" instance="Codilar\CategoryForGTM\Model\CronJob" method="generateCategoryPaths">
+            <config_path>catalog_configuration/catalog/category_path_for_gtm_expression</config_path>
+        </job>
+    </group>
+</config>

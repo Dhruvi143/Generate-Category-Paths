@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="catalog_configuration" translate="label" sortOrder="1250" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Catalog</label>
+            <tab>codilar</tab>
+            <group id="catalog" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Catalog Configuration</label>
+                <field id="categoryPath_enable" translate="label" type="select" sortOrder="80" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Logger Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="category_path" translate="label" type="button" sortOrder="90" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Generate the Category Path</label>
+                    <frontend_model>Codilar\CategoryForGTM\Block\System\Config\Button</frontend_model>
+                </field>
+                <field id="category_path_for_gtm_expression" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Cron Expression To Generate Category Paths</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
